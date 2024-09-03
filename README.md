@@ -1,5 +1,6 @@
-# Laboratoria: Riesgo Relativo - Super Caja
-Análisis de retrasos y cancelaciones en vuelos de EUA en enero 2023
+# Laboratoria: Análisis de retrasos y cancelaciones.
+Análisis de retrasos y cancelaciones en vuelos de EUA en enero 2023.
+![Untitled design](https://github.com/user-attachments/assets/45e10068-7a75-4be5-8733-2ef380a66616)
 
 # 📊Temas 
 - [Objetivo](#objetivo)
