@@ -106,16 +106,12 @@ El análisis exploratorio se llevó a cabo en Power BI, cargando el consolidado 
 
 - Agrupar y visualizar datos según variables categóricas:
   - Se agruparon retrasos y cancelaciones por aerolíneas, aeropuertos, rutas y motivos.
-  
 - Aplicar medidas de tendencia central y dispersión:
   - Se calcularon medidas de tendencia central (media, mediana) y dispersión (mínimo, máximo, desviación estándar) para los retrasos.
-
 - Visualizar el comportamiento de los datos a lo largo del tiempo:
   - Se observó el comportamiento de los retrasos y cancelaciones durante el mes de enero, así como el promedio de minutos de retraso por hora del día.
-
 - Calcular cuartiles:
   - Se calcularon cuartiles para la variable `DISTANCE`.
-
 - Calcular correlación entre variables:
   - Se realizó una matriz de correlación en Google Colab.
 
