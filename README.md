@@ -41,9 +41,9 @@ El flujo de trabajo incluyó varias etapas: el procesamiento de los datos, anál
 
 - Conectar/importar datos a otras herramientas:
   - Se han importado los datos en tablas dentro del ambiente de BigQuery (DOT_CODE_DICTIONARY, AIRLINE_CODE_DICTIONARY y flights_202301).
-  
 - Identificar y manejar valores nulos:
-  - Se identificaron valores nulos a través de comandos SQL `COUNTIF` y `IS NULL`. No son registros faltantes, sino valores no aplicables para vuelos cancelados o desviados. La excepción fue `CRS_ELAPSED_TIME` que presentó un nulo verdadero.
+  - Se identificaron valores nulos a través de comandos SQL `COUNTIF` y `IS NULL`.
+  - No son registros faltantes, sino valores no aplicables para vuelos cancelados o desviados. La excepción fue `CRS_ELAPSED_TIME` que presentó un nulo verdadero.
     - Nulos en tabla `flights_202301`:
       - `null_DEP_TIME`: 9,978
       - `null_DEP_DELAY`: 9,982
@@ -64,20 +64,18 @@ El flujo de trabajo incluyó varias etapas: el procesamiento de los datos, anál
     - Nulos en tabla `airline_code_dictionary`:
       - `null_Description`: 4
   - Se manejaron valores nulos con imputación simple de 0, excepto el único nulo en `CRS_ELAPSED_TIME`, que se eliminó de la tabla con `WHERE CRS_ELAPSED_TIME IS NOT NULL`.
-
 - Identificar y manejar valores duplicados:
   - Se identificaron duplicados en la tabla `dot_code_dictionary`: 4 duplicados.
-  - Se manejaron creando un número de fila (`ROW_NUMBER`), manteniendo solo un registro para evitar duplicados.
-
+  - Se manejaron creando un número de fila (`ROW_NUMBER`), manteniendo solo un registro.
 - Identificar y manejar datos discrepantes en variables categóricas:
   - Se encontraron registros con diferente formato en `DOT_CODE_DICTIONARY`, los cuales se eliminaron al manejar los duplicados.
-
 - Identificar y manejar datos discrepantes en variables numéricas:
-  - Se identificaron outliers mediante histogramas y boxplots en Google Colab. Se decidió no eliminarlos.
-
+  - Se identificaron outliers mediante histogramas y boxplots en Google Colab.
+  - Se identifico el 11 de enero como con un día extraordinario (Interrupción del sistema FAA en los Estados Unidos de 2023).
+  - [Conoce más aquí](https://es.wikipedia.org/wiki/Interrupci%C3%B3n_del_sistema_FAA_en_los_Estados_Unidos_de_2023)
+  - Se decidió no eliminarlos. 
 - Comprobar y cambiar tipo de dato:
   - Se cambió el tipo de dato de las columnas `CRSDEPTIME`, `DEP_TIME`, `WHEELS_OFF`, `WHEELS_ON`, `CRSARRTIME`, `ARR_TIME` de entero a `TIME`.
-
 - Crear nuevas variables:
   - La creación de variables fue iterativa durante el proyecto. Se crearon:
     - `DAY_OF_WEEK`: Día de la semana con `FORMAT_DATE`.
@@ -94,10 +92,8 @@ El flujo de trabajo incluyó varias etapas: el procesamiento de los datos, anál
     - `EXCLUDING_NAS`: Grupo no expuesto para `NAS`.
     - `EXCLUDING_SECURITY`: Grupo no expuesto para `Security`.
     - `EXCLUDING_LATE_AIRCRAFT`: Grupo no expuesto para `Late Aircraft`.
-
 - Unir tablas:
   - Se realizaron uniones (`LEFT JOIN`) entre las tablas `flights_cambio_time`, `airline_code_dictionary` y `dot_code_limpio`.
-
 - Construir tablas auxiliares:
   - Se crearon tablas para observar aerolíneas, aeropuertos y rutas con más retrasos y tiempos de cancelaciones.
     - `retrasos_aerolineas`
