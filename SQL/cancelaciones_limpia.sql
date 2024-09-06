@@ -1,0 +1,32 @@
+-- Query para ver cancelaciones con la nueva columna CANCELLATION_CODE
+SELECT
+  FL_DATE,
+  AIRLINE_CODE,
+  DOT_CODE,
+  FL_NUMBER,
+  ORIGIN,
+  ORIGIN_CITY,
+  DEST,
+  DEST_CITY,
+  CRS_DEP_TIME,
+  CRS_ARR_TIME,
+  CANCELLED,
+  CANCELLATION_CODE,
+  CASE
+    WHEN CANCELLATION_CODE = 'A' THEN 'Carrier'
+    WHEN CANCELLATION_CODE = 'B' THEN 'Weather'
+    WHEN CANCELLATION_CODE = 'C' THEN 'National Aviation System'
+    WHEN CANCELLATION_CODE = 'D' THEN 'Security'
+    ELSE 'Unknown' 
+  END AS CANCELLATION_REASON,
+  DIVERTED,
+  CRS_ELAPSED_TIME,
+  DISTANCE,
+  FL_YEAR,
+  FL_MONTH,
+  FL_DAY
+FROM
+  proyecto4-vuelos.dataset_vuelos.flights_202301
+WHERE
+  CANCELLED = 1
+  AND CRS_ELAPSED_TIME IS NOT NULL;
