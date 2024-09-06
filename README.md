@@ -1,6 +1,5 @@
 # Laboratoria: Análisis de retrasos y cancelaciones.
 Análisis de retrasos y cancelaciones en vuelos de EUA en enero 2023.
-![Untitled design](https://github.com/user-attachments/assets/45e10068-7a75-4be5-8733-2ef380a66616)
 
 # 📊 Temas 
 - [Objetivo](#objetivo)
@@ -23,6 +22,7 @@ Evaluar y caracterizar los patrones de retraso y cancelaciones en los vuelos de 
 
 ## Equipo
 - [Jaqueline Mera](https://github.com/JaquelineMera)
+- [Frida Castillo](https://github.com/Fri21)
 
 ## Herramientas
 + BigQuery
@@ -145,24 +145,29 @@ Se validaron 6 hipótesis a través del cálculo del riesgo relativo y los resul
 
 # Resultados
 - **EDA:** Del Análisis Exploratorio de Datos (EDA) podemos decir que se estudiaron un total de 538 mil vuelos, operando en 339 aeropuertos y cubriendo 5,581 rutas, bajo la operación de 15 aerolíneas. Del total de vuelos, 117,000 (21.66%) experimentaron algún tipo de retraso, lo que significa que aproximadamente 1 de cada 5 vuelos se vio afectado. Además, 10,000 vuelos fueron cancelados, representando casi el 2%. Cabe destacar que el 11 de enero ocurrió una interrupción significativa del sistema de la FAA (Administración Federal de Aviación), afectando las operaciones aéreas en todo el país.
+![Diapositiva1](https://github.com/user-attachments/assets/7c91ba8e-68ae-4392-859f-22505b2cae6b)
+
 
 - **Hipótesis 1:** Algunas aerolíneas tienen un historial de retrasos significativamente mayor que otras.
   - La hipótesis se valida parcialmente. Cuatro de las 15 aerolíneas presentan un riesgo relativo alto (entre 1.22 y 1.59), lo que indica que algunas aerolíneas tienen mayor riesgo de retrasos. Sin embargo, las aerolíneas con más retrasos no siempre tienen los riesgos relativos más altos, ya que estas se encuentran por debajo de 1.03.
 
 - **Hipótesis 2:** Algunos aeropuertos tienden a tener retrasos más frecuentes o severos en comparación con otros.
   - Se valida. Hay aeropuertos que presentan un riesgo relativo elevado (64 aeropuertos con riesgo entre 1.2 y 2.5), con PPG Pago Pago TT y CKB Clarksburg/Fairmont, WV, superando el riesgo relativo de 2. Sin embargo, los aeropuertos con más riesgo relativo tienden a ser aeropuertos pequeños con menos vuelos.
+![Diapositiva2](https://github.com/user-attachments/assets/9a2e4bfd-9a48-46a9-82c9-6a8b87099ede)
 
 - **Hipótesis 3:** Los vuelos más largos tienen mayores tiempos de retraso en comparación con los vuelos más cortos.
   - Se valida. Los vuelos más largos, entre 1.1 mil y 5.1 mil millas, tienen un riesgo relativo mayor (1.11), mientras que los vuelos más cortos tienen un menor riesgo relativo (0.88 para vuelos de hasta 0.4 mil millas).
 
 - **Hipótesis 4:** Los retrasos en los vuelos son más comunes durante las horas punta del día.
   - Se valida parcialmente. Si bien se registra un mayor número de retrasos a las 6:00 am y entre las 6:00 y 7:00 pm, el mayor riesgo relativo no ocurre en estas horas punta. El mayor riesgo relativo de retrasos (1.98-2.04) se presenta entre las 3:00 y 4:30 am, un periodo que no coincide con las horas de mayor tráfico aéreo. La hipótesis se valida en términos de magnitud de retrasos, pero no en relación con el mayor riesgo relativo.
+![Diapositiva3](https://github.com/user-attachments/assets/02c6c747-b565-44bd-9b1b-79c36ae26e80)
 
 - **Hipótesis 5:** Algunos motivos de retrasos son más prevalentes que otros, indicando causas específicas más comunes para el retraso de un vuelo.
   - Se valida. Los retrasos por operador (1.18) y por NAS (1.05) son más comunes, con poco más de 20 mil retrasos cada uno. Como tercer motivo se encuentran los retrasos por aeronaves tardías (0.86) con 15 mil retrasos. Por último, los retrasos por clima tienen un riesgo relativo bajo (0.06), al igual que los de seguridad (0.01). Cabe destacar que el 47% de los retrasos son multicausales.
 
 - **Hipótesis 6:** Algunos códigos de cancelación son más prevalentes que otros, indicando causas específicas más comunes.
   - Se valida. Las cancelaciones debidas al clima presentan el mayor riesgo relativo (1.8), con 6.6 mil cancelaciones. En comparación, las cancelaciones por seguridad y operador tienen riesgos relativos significativamente más bajos.
+![Diapositiva4](https://github.com/user-attachments/assets/bac478d0-3388-44eb-9686-5d6ff710739f)
 
 # Conclusiones
 
@@ -202,7 +207,10 @@ Se validaron 6 hipótesis a través del cálculo del riesgo relativo y los resul
 
 - **Modelo predictivo de retrasos:** Desarrollar un modelo para predecir si un vuelo se retrasará o no, utilizando variables categóricas binarias. La variable dependiente será binaria (RETRASO), tomando el valor 1 si el retraso supera un umbral específico (ej. 15 minutos) y 0 si no lo hace. Las variables independientes incluirán factores como la distancia del vuelo, retrasos debidos a la aerolínea, el clima, el control del tráfico aéreo, la seguridad y el horario de salida programado, entre otros. Este modelo utilizará técnicas de clasificación para anticipar la probabilidad de que un vuelo se retrase.
 
-
+## Enlaces
+### [Presentación](link)
+### [Dashboard](link)
+### [Video Loom](link)
 
 
 
