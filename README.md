@@ -132,7 +132,7 @@ El riesgo relativo se define como:
 
 **Riesgo Relativo (RR)** = \[Tasa de Incidencia en el Grupo Expuesto\] / \[Tasa de Incidencia en el Grupo No Expuesto\]
 
-# Validación de hipótesis
+## Validación de hipótesis
 
 Se validaron 6 hipótesis a través del cálculo del riesgo relativo y los resultados del análisis exploratorio de datos. Las hipótesis son:
 
