@@ -1,5 +1,6 @@
 # Laboratoria: Análisis de retrasos y cancelaciones.
 Análisis de retrasos y cancelaciones en vuelos de EUA en enero 2023.
+![Untitled design (1)](https://github.com/user-attachments/assets/dafbfaa8-030d-4b82-8724-bed14d33923b)
 
 # 📊 Temas 
 - [Objetivo](#objetivo)
