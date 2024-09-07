@@ -203,7 +203,6 @@ Se validaron 6 hipótesis a través del cálculo del riesgo relativo y los resul
 ## Enlaces
 ### [Presentación](link)
 ### [Dashboard](link)
-### [Video Loom](link)
 
 
 
