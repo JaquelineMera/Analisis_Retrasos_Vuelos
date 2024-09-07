@@ -201,8 +201,8 @@ Se validaron 6 hipótesis a través del cálculo del riesgo relativo y los resul
 - **Modelo predictivo de retrasos:** Desarrollar un modelo para predecir si un vuelo se retrasará o no, utilizando variables categóricas binarias. La variable dependiente será binaria (RETRASO), tomando el valor 1 si el retraso supera un umbral específico (ej. 15 minutos) y 0 si no lo hace. Las variables independientes incluirán factores como la distancia del vuelo, retrasos debidos a la aerolínea, el clima, el control del tráfico aéreo, la seguridad y el horario de salida programado, entre otros. Este modelo utilizará técnicas de clasificación para anticipar la probabilidad de que un vuelo se retrase.
 
 ## Enlaces
-### [Presentación](link)
-### [Dashboard](link)
+### [Presentación](https://drive.google.com/file/d/1vBEJT0gVIyEFvBjikvA1T_SM08BEir0i/view?usp=sharing)
+### [Dashboard](https://drive.google.com/file/d/1XM34H_0GmK_6AEw8LBEQVGfwyzLsaQ0e/view?usp=sharing)
 
 
 
